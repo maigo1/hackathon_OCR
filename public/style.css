@@ -1,0 +1,16 @@
+h1{
+    text-align: "center";
+    
+    height: 100px;
+    width: 500px;
+}
+body {
+    background-color: lightblue;
+    text-align: center;
+  }
+.page_title{
+    /* font-size: xx-large; */
+    font-size: 150px;
+
+    color: black;
+  }
