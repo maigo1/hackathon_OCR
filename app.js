@@ -26,7 +26,7 @@ app.set("view engine", "ejs");
 
 // ROUTES
 
-app.get('/', (req,res) => {
+app.get('/start', (req,res) => {
     res.render('index');
 });
 
@@ -45,13 +45,13 @@ app.post("/upload", (req, res) => {
                 const { data: { text } } = await worker.recognize(data);
                 console.log(text);
                 // res.send(text)
-                await worker.terminate();
+                // await worker.terminate();
               })();
-            
         });
     });
+    res.redirect('/start')
 });
 
 // start server
 const PORT = 5000 || process.env.PORT;
-app.listen(PORT, () => console.log(`Hey I an on PORT ${PORT}`));     //  '' , "" , `` are different~
+app.listen(PORT, () => console.log(`Hey I am on PORT ${PORT}`));     //  '' , "" , `` are different~
